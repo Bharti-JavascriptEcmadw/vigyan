@@ -370,8 +370,8 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
 {/* Registration button  */}
 <div className="hidden md:flex w-auto md:w-[20%] lg:w-[15%] justify-end items-center ml-2">
   <NavLink
-    to="/bookdemo"
-    onClick={() => handleClick("/bookdemo")}
+    to="/registration"
+    onClick={() => handleClick("/registration")}
     className={({ isActive }) =>
       `whitespace-nowrap transition duration-300 ${
         isActive ? "text-yellow-300" : "text-white"

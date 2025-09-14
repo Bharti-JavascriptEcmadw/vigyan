@@ -20,6 +20,7 @@ import PrivacyPolicy from "./components/PrivacyPolicy";
 import Quizz from "./pages/Quizz";
 import Online from "./pages/Online-program";
 import CourseDetail from "./components/OnlineProgram/CourseDetail";
+import Registration from "./pages/Registration";
 
 const App = () => {
   return (
@@ -41,6 +42,7 @@ const App = () => {
 
 
         <Route path="/courses/:slug" element={<CourseDetail />} />
+        <Route path="/registration" element={<Registration/>}/>
 
 
 

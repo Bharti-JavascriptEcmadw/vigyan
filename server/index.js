@@ -37,10 +37,12 @@ Connectdb();
 
 import getintouch from './routes/getintouch.js'
 import bookdemo from './routes/bookdemo.js'
+import registrationRoute from './routes/registrationRoutes.js'
+
 app.use("/api/messages", getintouch); 
 app.use("/api/book-demo", bookdemo)
 
-
+app.use('/api/registration', registrationRoutes);
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
