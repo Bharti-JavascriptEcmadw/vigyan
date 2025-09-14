@@ -1,8 +1,7 @@
 // controllers/registrationController.js
-const Registration = require('../models/Registration');
+import Registration from '../models/Registration.js';
 
-// For file uploads (if using multer)
-const createRegistration = async (req, res) => {
+export const createRegistration = async (req, res) => {
   try {
     const {
       type,
@@ -50,8 +49,4 @@ const createRegistration = async (req, res) => {
     console.error('Error in registration:', error);
     res.status(500).json({ error: 'Something went wrong while registering.' });
   }
-};
-
-module.exports = {
-  createRegistration,
 };

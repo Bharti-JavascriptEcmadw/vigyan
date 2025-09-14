@@ -1,5 +1,5 @@
 // models/Registration.js
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const registrationSchema = new mongoose.Schema({
   type: {
@@ -16,7 +16,7 @@ const registrationSchema = new mongoose.Schema({
     enum: ['Junior', 'Senior'],
     required: true,
   },
-  subCategory: String, // class: 6th, 7th, etc.
+  subCategory: String,
 
   leaderName: { type: String, required: true },
   member1: { type: String, required: true },
@@ -35,7 +35,7 @@ const registrationSchema = new mongoose.Schema({
     required: true,
   },
 
-  receiptFileUrl: String, // URL or path to uploaded file (optional if offline)
+  receiptFileUrl: String,
 
   createdAt: {
     type: Date,
@@ -43,4 +43,6 @@ const registrationSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('Registration', registrationSchema);
+const Registration = mongoose.model('Registration', registrationSchema);
+
+export default Registration;

@@ -1,8 +1,9 @@
 // routes/registrationRoutes.js
-const express = require('express');
+import express from 'express';
+import multer from 'multer';
+import { createRegistration } from '../controllers/registrationController.js';
+
 const router = express.Router();
-const multer = require('multer');
-const { createRegistration } = require('../controllers/registrationController');
 
 // Configure multer for file upload
 const storage = multer.diskStorage({
@@ -14,6 +15,7 @@ const storage = multer.diskStorage({
     cb(null, uniqueSuffix + '-' + file.originalname);
   },
 });
+
 const upload = multer({ storage });
 
 router.post(
@@ -22,4 +24,4 @@ router.post(
   createRegistration
 );
 
-module.exports = router;
+export default router;
