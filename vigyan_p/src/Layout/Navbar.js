@@ -406,7 +406,25 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
               </ul>
             </div>
 
-            
+
+
+{/* Registration button  */}
+<div className="hidden md:flex w-auto md:w-[22%] lg:w-[15%] justify-end items-center ml-2">
+  <NavLink
+    to="/bookdemo"
+    onClick={() => handleClick("/bookdemo")}
+    className={({ isActive }) =>
+      `whitespace-nowrap transition duration-300 ${
+        isActive ? "text-yellow-300" : "text-white"
+      }`
+    }
+  >
+    <button className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400 text-white font-extrabold rounded-full shadow-lg border border-white animate-pulse transition-all duration-500 ease-in-out px-3 py-1.5 text-[0.9rem] sm:text-[0.75rem] sm:px-2 sm:py-1 md:text-[0.8rem] md:px-2 md:py-1 lg:text-[1.1rem] lg:px-5 lg:py-2 sm:mr-2 md:mr-3 lg:mr-4">
+      🎉 Registration 🎉
+    </button>
+  </NavLink>
+</div>
+
 
   {/* Book Demo Button */}
 
@@ -558,6 +576,17 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
     </NavLink>
   </li>
 
+   <li>
+    <NavLink 
+    to="/bookdemo" 
+                 onClick={() => handleClick("/bookdemo")}
+    >
+      <button className="bg-blue-800 hover:bg-teal-500 text-white px-10 py-3 rounded-full font-semibold text-[4.5vw] transition-all duration-200">
+        BOOK DEMO
+      </button>
+    </NavLink>
+  </li>
+
   <li>
     <NavLink 
     to="/bookdemo" 
@@ -572,7 +601,6 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
   </div>
 )}
 
- {/* <SubNavbar/> */}
  </nav>
 </>
   );
