@@ -112,7 +112,7 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
           <div className=" flex  flex-row items-center justify-between h-auto flex-wrap sm:flex-nowrap">
 
             {/* Logo */}
-            <div className="w-[50%] sm:w-[50%] md:w-[20%] lg:w-[25%] lg:h-[6vw]">
+            <div className="w-[150%] sm:w-[50%] md:w-[20%] lg:w-[25%] lg:h-[6vw]">
               <NavLink to="/"
                  onClick={() => handleClick("/")}
 
@@ -132,10 +132,12 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
 
             {/* Nav Links (hidden on xs, shown on sm+) */}
             
-              <div className="hidden md:flex w-full justify-center flex-wrap md:flex-nowrap mr-7 ml-5 md:mr-8 ">
-  <ul className="flex items-center justify-around xl:font-bold xl:gap-8 xl:text-[1rem] xl:px-8 w-full
+    <div className="hidden md:flex w-full justify-center flex-wrap md:flex-nowrap mr-7 ml-5 md:mr-8 ">
+  <ul className="flex items-center justify-around xl:font-bold xl:gap-5 xl:text-[1rem] xl:px-8 w-full
   lg:gap-[0%] lg:px-1 lg:text-[0.8rem] lg:font-bold lg:py-0
-  md:text-[0.8rem] md:pr-2 font-bold md:gap-[1.3%] ">
+  md:text-[0.2rem] md:pr-2 font-bold md:gap-[1.3%] ">
+
+
         <li>
            <NavLink
             to="/"
@@ -181,23 +183,7 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
             Success Stories
             </NavLink>
             </li>
-{/*                 
-                <li className="group relative">
-                  <NavLink
-                  to="/courses"
-                             onClick={() => handleClick("/courses")}
 
-                  
-            style={({ isActive }) => ({
-              color: isActive ? "#79dfa7" : "white",
-              textDecoration: "none",
-              cursor: "pointer",
-            })}
-                    className="whitespace-nowrap group-hover:text-[#79dfa7] transition duration-300"
-                  >
-                    Courses
-                  </NavLink>
-                </li> */}
 
 
                 {/* Courses  */}
@@ -244,20 +230,7 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
               </NavLink>
             </li>
 
-              {/* <li>
-              <NavLink
-                to="/online-program"
-                           onClick={() => handleClick("/online-program")}
-
-                className={({ isActive }) =>
-                  `block py-2 px-4 hover:bg-gray-200 ${
-                    isActive ? "text-[#79dfa7] font-semibold" : ""
-                  }`
-                }
-              >
-               Online-Program
-              </NavLink>
-            </li> */}
+      
           </ul>
         </div>
       )}
@@ -341,21 +314,7 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
                 Event
               </NavLink>
             </li>
-            {/* <li>
-              <NavLink
-              to="/assets/vigyan/brochure.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block py-2 px-4 hover:bg-gray-200"
-              onClick={() => handleClick("/event")}
-              className={({ isActive }) =>
-                  `block py-2 px-4 hover:bg-gray-200 ${
-                    isActive ? "text-[#79dfa7] font-semibold" : ""
-                  }`}>
-                Brochure
-              </NavLink>
-            </li> */}
-
+          
 
   <li>
   <NavLink
@@ -409,7 +368,7 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
 
 
 {/* Registration button  */}
-<div className="hidden md:flex w-auto md:w-[22%] lg:w-[15%] justify-end items-center ml-2">
+<div className="hidden md:flex w-auto md:w-[20%] lg:w-[15%] justify-end items-center ml-2">
   <NavLink
     to="/bookdemo"
     onClick={() => handleClick("/bookdemo")}
@@ -420,7 +379,7 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   >
     <button className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400 text-white font-extrabold rounded-full shadow-lg border border-white animate-pulse transition-all duration-500 ease-in-out px-3 py-1.5 text-[0.9rem] sm:text-[0.75rem] sm:px-2 sm:py-1 md:text-[0.8rem] md:px-2 md:py-1 lg:text-[1.1rem] lg:px-5 lg:py-2 sm:mr-2 md:mr-3 lg:mr-4">
-      🎉 Registration 🎉
+    Registration
     </button>
   </NavLink>
 </div>
@@ -430,7 +389,7 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
 
 
 
-  <div className="hidden md:flex w-auto md:w-[22%] lg:w-[15%] justify-end items-center ml-2">
+  <div className="hidden md:flex w-auto md:w-[20%] lg:w-[15%] justify-end items-center ml-2">
   <NavLink
   to="/bookdemo"
   onClick={() => handleClick("/bookdemo")}
@@ -586,17 +545,19 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
       </button>
     </NavLink>
   </li>
-
-  <li>
-    <NavLink 
+<li>
+  <NavLink 
     to="/bookdemo" 
-                 onClick={() => handleClick("/bookdemo")}
-    >
-      <button className="bg-blue-800 hover:bg-teal-500 text-white px-10 py-3 rounded-full font-semibold text-[4.5vw] transition-all duration-200">
-        BOOK DEMO
-      </button>
-    </NavLink>
-  </li>
+    onClick={() => handleClick("/bookdemo")}
+  >
+    <button className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400 animate-pulse hover:from-yellow-400 hover:to-pink-500 text-white font-extrabold px-10 py-3 rounded-full text-[4.5vw] transition-all duration-700 ease-in-out shadow-lg border border-white">
+      Registration
+          </button>
+  </NavLink>
+</li>
+
+
+
 </ul>
   </div>
 )}
