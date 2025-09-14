@@ -1,0 +1,32 @@
+import React from "react";
+
+const topics = [
+  { name: "Transforming Education ", target: "transforming" },
+  { name: "End-To-End Solution", target: "endtoend" },
+    { name: "Core Competencies", target: "core" },
+
+  { name: "Kit", target: "kit" },
+  { name: "Join US", target: "joinus" },
+  
+];
+
+const SchoolTopNav = ({ onScroll }) => {
+  return (
+    <div className="w-full bg-gray-300 shadow-md ">
+      <ul className="w-full flex flex-wrap justify-center gap-2 py-3 px-4 text-sm font-medium text-gray-700">
+        {topics.map(({ name, target }, index) => (
+          <li key={index} className="px-2">
+            <button
+              onClick={() => onScroll(target)}
+              className="hover:text-blue-600 transition-colors"
+            >
+              {name}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default SchoolTopNav;

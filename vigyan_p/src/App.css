@@ -1,0 +1,444 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* global styles (if needed) */
+body {
+  margin: 0;
+  padding: 0;
+}
+/* App.css ya index.css me add karein */
+html {
+  scroll-behavior: smooth;
+}
+
+
+.sticky-top {
+  position: sticky !important;
+  top: 0;
+  z-index: 50;
+}
+
+
+.App {
+  text-align: center;
+}
+
+
+
+/** Scroll bar remove */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/** welcome to vigyan pathshala   */
+
+@keyframes scrollLeftToRight {
+  0% {
+    transform: translateX(-5%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-5%);
+  }
+}
+
+.left-to-right {
+  animation: scrollLeftToRight 6s ease-in-out infinite;
+  display: inline-block;
+}
+
+
+
+/*** Empowering mind */
+@keyframes bounceX {
+  0%, 100% {
+    transform: translateX(-3%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+}
+
+.animate-bounce-x {
+  animation: bounceX 4s ease-in-out infinite;
+  display: inline-block;
+}
+
+
+
+/**  Home page our service section  y axix __/
+
+
+/* Apply perspective to container */
+.perspective-3d {
+  perspective: 1000px; /* Gives depth to the container */
+}
+
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 1s ease-out;
+}
+
+.card-3d.rotate {
+  transform: rotateY(0deg);
+}
+
+.card-3d:not(.rotate) {
+  transform: rotateY(-90deg); /* Start with the card rotated */
+  opacity: 0;
+}
+
+@keyframes rotateYAnimation {
+  from {
+    transform: rotateY(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+/* *  Innovation  home page   */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    /* transform: translateY(20px); */
+    color:#79dfa7
+  }
+  100% {
+    opacity: 1;
+    /* transform: translateY(0); */
+    /* color: green; */
+    
+  }
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+
+/* *  Home-1 banner  Most Important  y axix ke according left to right rotate  */
+/* Define the Keyframes for rotateYLeft animation */
+@keyframes rotateYLeft {
+  0% {
+    opacity: 0;
+    transform: rotateY(-90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+
+.animate-rotateYLeft {
+  animation: rotateYLeft 1s ease-out;
+   /* animation:'rotateYRight 1s ease-out', */
+
+}
+.origin-center {
+  transform-origin: center;
+}
+
+
+
+
+/** -------Home Page progress bar---- */
+
+@keyframes float {
+  0%, 100% {
+    transform: rotateX(1deg) rotateY(1deg);
+  }
+  50% {
+    transform: rotateX(3deg) rotateY(-3deg) translateY(-10px);
+  }
+}
+
+.animated-3d {
+  animation: float 2s ease-in-out infinite;
+}
+
+/* Fade-in + 3D rotate effect */
+.animate-fade-rotate {
+  animation: rotateYAnimation 1s ease-out forwards;
+}
+
+
+
+/* Keyframe animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes fillProgress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: var(--progress-width);
+  }
+}
+
+/* Apply animations */
+.animate-slide-in {
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 9999px;
+  height: 8px;
+}
+
+.progress-fill {
+  background-color: #06c5f5;
+  border-radius: 9999px;
+  height: 8px;
+  animation: fillProgress 2s ease-out forwards;
+  transition: width 0.3s ease-out; /* Smooth transition */
+}
+
+
+
+
+/* About home section me icons  */
+
+
+@keyframes rotate {
+  0% {
+    opacity: 0;
+    transform: rotateY(0deg);
+  }
+  0% {
+    opacity: 1;
+    transform: rotateY(90deg);
+  }
+  
+    100% {
+    opacity: 1;
+    transform: rotateY(360deg);
+  }
+}
+.animate-rotate:hover {
+  animation-play-state: paused;
+}
+
+.animate-rotate {
+  animation: rotate 10s ease-out infinite;
+   animation:'rotate 1s ease-out infinite',
+
+}
+.origin-center {
+  transform-origin: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* About  */
+
+
+
+/** ---Meet our team member about page --------- */
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/*! Meet our team member  */
+.carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  animation: infiniteScroll 200s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.carousel-card {
+  transition: transform 0.3s ease;
+}
+
+.carousel-card:hover {
+  transform: scale(1.05);
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.perspective {
+  perspective: 1200px;
+}
+
+
+/*! Carousel end  */
+
+
+
+
+@keyframes float {
+  0%, 100% {
+    transform: rotateX(4deg) rotateY(4deg) translateY(0);
+  }
+  50% {
+    transform: rotateX(3deg) rotateY(-3deg) translateY(-10px);
+  }
+}
+
+.animated-3d {
+  animation: float 2s ease-in-out infinite;
+  transform: rotateX(1deg) rotateY(1deg);
+  transform-style: preserve-3d;
+}
+
+
+
+
+/* !Book demo text  */
+
+
+@keyframes zoom-in {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.animate-zoom-in {
+  animation: zoom-in 1.3s ease-in-out both;
+}
+
+/*! book demo end  */
+
+
+
+
+/* ! navbar  */
+
+.group {
+  position: relative;
+}
+
+.group:hover .absolute {
+  opacity: 1; 
+  visibility: visible; 
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.group .absolute {
+  opacity: 0;
+  visibility: hidden; 
+  transform: translateY(10px); 
+}
+
+.group img {
+  transition: transform 0.5s ease;
+}
+
+.group:hover img {
+  transform: scale(1.05);
+}
+
+.group button {
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.group:hover button {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.navbar {
+  position: relative;
+  z-index: 10;
+}
+
+.navbar a {
+  position: relative;
+  z-index: 20; 
+  transition: color 0.3s ease; 
+}
+
+.navbar a:hover {
+  color: #79dfa7; 
+}
+
+/* ! navbar end  */
+
+
+
+
+
+
+
+
+/* home page banner css */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(-60%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+
+
+.animate-slide-text {
+  animation: slideInRight 1s ease-out forwards;
+}
+
+.animate-image-zoom {
+  animation: zoomPulse 6s ease-in-out infinite;
+}
+
+
+
+
+
