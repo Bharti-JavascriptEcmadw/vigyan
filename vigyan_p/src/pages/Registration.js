@@ -100,7 +100,9 @@ const RegistrationForm = () => {
     "Benhur",
     "Bethany",
     "Saint johns"],
-    Salempur: [/* your school list */],
+    Salempur: [ "ST. XAVIER SCHOOL",
+"AATMDEEP VIDYALAYA "
+],
   };
 
   const workshopOptions = ["Drone Racing", "Robotics", "EV", "AI"];
