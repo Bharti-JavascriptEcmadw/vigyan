@@ -410,7 +410,7 @@ const RegistrationForm = () => {
           {formData.feeMode === "online" && (
             <div className="flex flex-col gap-2">
               <img
-                src="https://cdn-icons-png.flaticon.com/512/2897/2897990.png"
+                src="/assets/phone.png"
                 alt="Scanner"
                 className="w-32 h-32 object-contain mx-auto"
               />
