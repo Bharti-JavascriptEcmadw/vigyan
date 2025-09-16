@@ -1,13 +1,11 @@
 
-
-
 import React, { useState } from "react";
 
 const RegistrationForm = () => {
   const [type, setType] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
+  const [customCity, setCustomCity] = useState("");
   const [selectedSchool, setSelectedSchool] = useState("");
-  const [workshopOption, setWorkshopOption] = useState("");
   const [category, setCategory] = useState("");
   const [subCategory, setSubCategory] = useState("");
   const [formData, setFormData] = useState({
@@ -21,42 +19,31 @@ const RegistrationForm = () => {
     email: "",
     feeMode: "",
     receiptFile: null,
+    customSchool: "",
+    workshop: "",
   });
 
-  const cities = ["Prayagraj", "Lucknow", "Salempur", "Gorakhpur", "Balrampur"];
+  const cities = [
+    "Prayagraj", "Lucknow", "Salempur", "Gorakhpur", "Maharajaganj",
+    "Balrampur", "Captanganj", "Piperich", "Others"
+  ];
 
   const schoolsByCity = {
-    Prayagraj: ["School A1", "School A2", "School A3", "School A4"],
-    Lucknow: ["School B1", "School B2", "School B3", "School B4"],
-    Salempur: ["School C1", "School C2", "School C3"],
+    Gorakhpur: [/* your school list */],
+    Lucknow: [/* your school list */],
+    Prayagraj: [/* your school list */],
+    Salempur: [/* your school list */],
   };
 
   const workshopOptions = ["Drone Racing", "Robotics", "EV", "AI"];
-  const juniorOptions = ["Race-O-Bot", "Junior  Future Innovators", ];
-  const seniorOptions = ["9th", "10th", "11th"];
+  const juniorOptions = ["RACE-O-BOT", "JUNIOR FUTURE INNOVATORS"];
+  const seniorOptions = ["ROBO RUGBY CHAMPIONSHIP", "SENIOR FUTURE INNOVATORS", "LINE FOLLOWER ROBOT"];
 
   const handleInputChange = (e) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const data = {
-      type,
-      ...(type === "NIB"
-        ? { city: selectedCity, school: selectedSchool }
-        : { workshop: workshopOption }),
-      category,
-      subCategory,
-      ...formData,
-    };
-
-    console.log("Form submitted:", data);
-    alert("Registration submitted successfully!");
   };
 
   const handleModeChange = (e) => {
@@ -74,6 +61,27 @@ const RegistrationForm = () => {
     }));
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const finalCity = selectedCity === "Others" ? customCity : selectedCity;
+    const finalSchool = selectedSchool === "Others" ? formData.customSchool || "Others" : selectedSchool;
+
+    const data = {
+      type,
+      ...(type === "NIB"
+        ? { city: finalCity, school: finalSchool }
+        : { workshop: formData.workshop }),
+      category,
+      subCategory,
+      ...formData,
+      city: finalCity,
+      school: finalSchool,
+    };
+
+    console.log("Form submitted:", data);
+    alert("Registration submitted successfully!");
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 py-10 px-4 flex justify-center items-start">
       <form
@@ -84,37 +92,38 @@ const RegistrationForm = () => {
           Student Registration Form
         </h1>
 
-        {/* Type Selection */}
-        <section>
-          <label className="block font-semibold text-gray-700 mb-2">
-            Participation Type
-          </label>
+        {/* Participation Type */}
+        <div>
+          <label className="block font-semibold mb-2 text-gray-700">Participation Type</label>
           <div className="flex gap-4">
-            {["NIB", "Workshop"].map((t) => (
+            {["NIB", "Workshop"].map((opt) => (
               <button
-                key={t}
+                key={opt}
                 type="button"
                 onClick={() => {
-                  setType(t);
+                  setType(opt);
                   setSelectedCity("");
                   setSelectedSchool("");
-                  setWorkshopOption("");
+                  setCustomCity("");
+                  setFormData((prev) => ({
+                    ...prev,
+                    customSchool: "",
+                    workshop: "",
+                  }));
                 }}
-                className={`px-6 py-2 rounded-md text-sm font-medium border transition-all ${
-                  type === t
-                    ? "bg-blue-600 text-white border-blue-600"
-                    : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
-                }`}
+                className={`px-4 py-2 rounded border text-sm ${type === opt ? "bg-blue-600 text-white border-blue-600" : "bg-white text-gray-800 border-gray-300"
+                  }`}
               >
-                {t}
+                {opt}
               </button>
             ))}
           </div>
-        </section>
+        </div>
 
-        {/* NIB Section */}
+        {/* NIB - City and School */}
         {type === "NIB" && (
-          <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Select City */}
             <div>
               <label className="block mb-2 text-sm font-semibold text-gray-700">
                 Select City
@@ -124,8 +133,9 @@ const RegistrationForm = () => {
                 onChange={(e) => {
                   setSelectedCity(e.target.value);
                   setSelectedSchool("");
+                  setCustomCity("");
                 }}
-                className="w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded px-4 py-2"
               >
                 <option value="">-- Choose City --</option>
                 {cities.map((city) => (
@@ -134,8 +144,20 @@ const RegistrationForm = () => {
                   </option>
                 ))}
               </select>
+
+              {selectedCity === "Others" && (
+                <input
+                  type="text"
+                  name="customCity"
+                  placeholder="Enter city name"
+                  className="mt-2 w-full border border-gray-300 rounded px-4 py-2"
+                  value={customCity}
+                  onChange={(e) => setCustomCity(e.target.value)}
+                />
+              )}
             </div>
 
+            {/* Select School */}
             {selectedCity && (
               <div>
                 <label className="block mb-2 text-sm font-semibold text-gray-700">
@@ -144,50 +166,57 @@ const RegistrationForm = () => {
                 <select
                   value={selectedSchool}
                   onChange={(e) => setSelectedSchool(e.target.value)}
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full border border-gray-300 rounded px-4 py-2"
                 >
                   <option value="">-- Choose School --</option>
-                  {schoolsByCity[selectedCity]?.map((school) => (
+                  {(schoolsByCity[selectedCity] || []).map((school) => (
                     <option key={school} value={school}>
                       {school}
                     </option>
                   ))}
+                  <option value="Others">Others</option>
                 </select>
+
+                {selectedSchool === "Others" && (
+                  <input
+                    type="text"
+                    name="customSchool"
+                    placeholder="Enter school name"
+                    className="mt-2 w-full border border-gray-300 rounded px-4 py-2"
+                    value={formData.customSchool}
+                    onChange={handleInputChange}
+                  />
+                )}
               </div>
             )}
-          </section>
+          </div>
         )}
 
-        {/* Workshop Section */}
+        {/* Workshop */}
         {type === "Workshop" && (
-          <section>
-            <label className="block mb-3 text-sm font-semibold text-gray-700">
-              Choose Workshop
-            </label>
+          <div>
+            <label className="block font-semibold text-gray-700 mb-2">Select Workshop</label>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {workshopOptions.map((option) => (
+              {workshopOptions.map((w) => (
                 <button
-                  key={option}
+                  key={w}
                   type="button"
-                  onClick={() => setWorkshopOption(option)}
-                  className={`px-4 py-2 rounded-md border text-sm font-medium transition ${
-                    workshopOption === option
-                      ? "bg-green-600 text-white border-green-600"
-                      : "bg-white border-gray-300 hover:bg-gray-100"
-                  }`}
+                  onClick={() => setFormData({ ...formData, workshop: w })}
+                  className={`px-4 py-2 rounded border text-sm ${formData.workshop === w
+                    ? "bg-green-600 text-white border-green-600"
+                    : "bg-white border-gray-300"
+                    }`}
                 >
-                  {option}
+                  {w}
                 </button>
               ))}
             </div>
-          </section>
+          </div>
         )}
 
-        {/* Category Selection */}
-        <section>
-          <label className="block font-semibold text-gray-700 mb-2">
-            Select Category
-          </label>
+        {/* Category and Subcategory */}
+        <div>
+          <label className="block font-semibold text-gray-700 mb-2">Select Category</label>
           <div className="flex gap-4">
             {["Junior", "Senior"].map((cat) => (
               <button
@@ -197,88 +226,55 @@ const RegistrationForm = () => {
                   setCategory(cat);
                   setSubCategory("");
                 }}
-                className={`px-6 py-2 rounded-md border text-sm font-medium transition ${
-                  category === cat
-                    ? "bg-blue-600 text-white border-blue-600"
-                    : "bg-white border-gray-300 hover:bg-gray-100"
-                }`}
+                className={`px-4 py-2 rounded border text-sm ${category === cat
+                  ? "bg-blue-600 text-white border-blue-600"
+                  : "bg-white border-gray-300"
+                  }`}
               >
                 {cat}
               </button>
             ))}
           </div>
-        </section>
+        </div>
 
-        {/* Subcategory (Class) */}
         {category && (
-          <section>
-            <label className="block font-semibold text-gray-700 mb-2">
-              Select Class
-            </label>
-            <div className="grid grid-cols-3 gap-4">
-              {(category === "Junior" ? juniorOptions : seniorOptions).map(
-                (cls) => (
-                  <button
-                    key={cls}
-                    type="button"
-                    onClick={() => setSubCategory(cls)}
-                    className={`px-4 py-2 rounded-md border text-sm font-medium transition ${
-                      subCategory === cls
-                        ? "bg-green-600 text-white border-green-600"
-                        : "bg-white border-gray-300 hover:bg-gray-100"
+          <div>
+            <label className="block font-semibold text-gray-700 mb-2">Select Subcategory</label>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {(category === "Junior" ? juniorOptions : seniorOptions).map((sub) => (
+                <button
+                  key={sub}
+                  type="button"
+                  onClick={() => setSubCategory(sub)}
+                  className={`px-4 py-2 rounded border text-sm ${subCategory === sub
+                    ? "bg-green-600 text-white border-green-600"
+                    : "bg-white border-gray-300"
                     }`}
-                  >
-                    {cls}
-                  </button>
-                )
-              )}
+                >
+                  {sub}
+                </button>
+              ))}
             </div>
-          </section>
+          </div>
         )}
 
-        {/* Team Members */}
-        <section>
-          <h3 className="font-semibold text-lg text-gray-800 mb-4">
-            Team Information (4 Members)
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* Team Information */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {["leaderName", "member1", "member2", "member3"].map((field, i) => (
             <input
-              name="leaderName"
+              key={field}
+              name={field}
               required
-              placeholder="Leader's Name"
-              value={formData.leaderName}
+              placeholder={["Leader Name", "Member 1", "Member 2", "Member 3"][i]}
+              value={formData[field]}
               onChange={handleInputChange}
-              className="input"
+              className="border border-gray-300 rounded px-4 py-2"
             />
-            <input
-              name="member1"
-              required
-              placeholder="Member 1 Name"
-              value={formData.member1}
-              onChange={handleInputChange}
-              className="input"
-            />
-            <input
-              name="member2"
-              required
-              placeholder="Member 2 Name"
-              value={formData.member2}
-              onChange={handleInputChange}
-              className="input"
-            />
-            <input
-              name="member3"
-              required
-              placeholder="Member 3 Name"
-              value={formData.member3}
-              onChange={handleInputChange}
-              className="input"
-            />
-          </div>
-        </section>
+          ))}
+        </div>
 
-        {/* Contact Info */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Class & Contact */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <input
             type="text"
             name="className"
@@ -286,7 +282,7 @@ const RegistrationForm = () => {
             placeholder="Class"
             value={formData.className}
             onChange={handleInputChange}
-            className="input"
+            className="border border-gray-300 rounded px-4 py-2"
           />
           <input
             type="text"
@@ -295,16 +291,16 @@ const RegistrationForm = () => {
             placeholder="School Address"
             value={formData.schoolAddress}
             onChange={handleInputChange}
-            className="input"
+            className="border border-gray-300 rounded px-4 py-2"
           />
           <input
             type="tel"
             name="contact"
             required
-            placeholder="Mentor Contact Number"
+            placeholder="Mentor Contact"
             value={formData.contact}
             onChange={handleInputChange}
-            className="input"
+            className="border border-gray-300 rounded px-4 py-2"
           />
           <input
             type="email"
@@ -313,25 +309,22 @@ const RegistrationForm = () => {
             placeholder="Mentor Email"
             value={formData.email}
             onChange={handleInputChange}
-            className="input"
+            className="border border-gray-300 rounded px-4 py-2"
           />
-        </section>
+        </div>
 
         {/* Fee Mode */}
-        <section>
-          <label className="block font-semibold text-lg mb-3 text-gray-700">
-            Registration Fee Mode
-          </label>
-          <div className="flex items-center gap-6 mb-4">
+        <div>
+          <label className="font-semibold text-gray-700 mb-2 block">Registration Fee Mode</label>
+          <div className="flex gap-6 mb-4">
             {["offline", "online"].map((mode) => (
-              <label key={mode} className="flex items-center space-x-2">
+              <label key={mode} className="flex items-center gap-2">
                 <input
                   type="radio"
                   name="feeMode"
                   value={mode}
                   checked={formData.feeMode === mode}
                   onChange={handleModeChange}
-                  className="text-blue-600"
                 />
                 <span className="capitalize">{mode}</span>
               </label>
@@ -339,29 +332,23 @@ const RegistrationForm = () => {
           </div>
 
           {formData.feeMode === "offline" && (
-            <div className="bg-gray-100 border p-4 rounded-md flex flex-col items-center">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/2913/2913462.png"
-                alt="Offline Payment"
-                className="w-24 h-24 object-contain mb-2"
-              />
-              <p className="text-gray-700 text-sm">
-                Please pay the fee offline at the registration desk.
-              </p>
+            <div className="bg-gray-100 p-4 rounded text-sm text-gray-700">
+              Please pay the registration fee at the school/desk.
             </div>
           )}
 
           {formData.feeMode === "online" && (
-            <div className="flex flex-col space-y-2">
-              <label className="text-sm font-medium text-gray-700">
-                Upload Fee Receipt
-              </label>
+            <div className="flex flex-col gap-2">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/2897/2897990.png"
+                alt="Scanner"
+                className="w-32 h-32 object-contain mx-auto"
+              />
               <input
                 type="file"
                 accept="image/*,application/pdf"
                 onChange={handleFileChange}
-                required
-                className="file-input"
+                className="mt-2"
               />
               {formData.receiptFile && (
                 <p className="text-green-600 text-sm">
@@ -370,13 +357,13 @@ const RegistrationForm = () => {
               )}
             </div>
           )}
-        </section>
+        </div>
 
-        {/* Submit Button */}
+        {/* Submit */}
         <div className="text-center">
           <button
             type="submit"
-            className="bg-blue-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-blue-700 transition"
+            className="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition"
           >
             Submit Registration
           </button>
