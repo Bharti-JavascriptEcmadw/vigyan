@@ -21,7 +21,11 @@ import Quizz from "./pages/Quizz";
 import Online from "./pages/Online-program";
 import CourseDetail from "./components/OnlineProgram/CourseDetail";
 import Registration from "./pages/Registration";
-
+import CompanyPolicy from "./pages/CompanyPolicy";
+import ShippingPolicy from "./pages/ShippingPolicy";
+import ReturnPolicy from "./pages/ReturnPolicy";
+import RefundPolicy from "./pages/RefundPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
 const App = () => {
   return (
     <Router>
@@ -50,7 +54,14 @@ const App = () => {
         <Route path="/school-program" element={<SchoolProgram />} />
         <Route path="/composite-lab" element={<CompositeLab />} />
         <Route path="/online-program" element={<Online />} />
-                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/privacy_policy" element={<PrivacyPolicy />} />
+
+        <Route path="/company-policy" element={<CompanyPolicy/>}/>
+        <Route path="shipping_policy" element={<ShippingPolicy/>}/>
+        <Route path="/return_policy" element={<ReturnPolicy />} />
+        <Route path="/refund_policy" element={< RefundPolicy/>}/>
+        <Route path="/T&C" element={<TermsAndConditions />} />
+
 
 
       </Routes>

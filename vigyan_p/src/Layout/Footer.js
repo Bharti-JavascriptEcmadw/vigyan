@@ -22,7 +22,7 @@ const Footer = () => {
     { label: 'Event', path: '/event' },
     { label: 'Courses', path: '/courses' },
     { label: 'Test Series', path: '/test-series' },
-    { label: 'Privacy  Policy', path: '/privacy-policy' },
+    { label: 'Privacy  Policy', path: '/company-policy' },
     
   ];
 
