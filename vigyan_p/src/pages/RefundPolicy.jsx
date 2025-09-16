@@ -15,7 +15,7 @@ the refund was approved or not. If approved, you’ll be automatically refunded 
 original payment method within 10 business days. Please remember it can take some
 time for your bank or credit card company to process and post the refund too. If more
 than 15 business days have passed since we’ve approved your return, please contact
-us at <mark>info@vigyanpathshala.com/ +91 8303309334</mark>
+us at <mark>Email: info@vigyanpathshala.com  Phone: +91 8303309334</mark>
 
           </p>
         </section>

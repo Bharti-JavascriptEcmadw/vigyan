@@ -100,7 +100,7 @@ const Footer = () => {
             {/* Brochure PDF still uses a normal <a> because it’s a static asset */}
             <li>
               <NavLink
-                to="/assets/vigyan/brochure.pdf"
+                to="/assets/12.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block hover:text-yellow-800 text-white transition"
