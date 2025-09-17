@@ -24,42 +24,42 @@ const RegistrationForm = () => {
   });
 
   const cities = [
-    "Prayagraj", "Lucknow", "Salempur", "Gorakhpur", "Maharajaganj",
-    "Balrampur", "Captanganj", "Piperich", "Others"
+    "Prayagraj", "Lucknow", "Salempur", "Gorakhpur", "Maharajganj",
+    "Balrampur", "kaptanganj", "Pipraich", "Others"
   ];
 
   const schoolsByCity = {
     Gorakhpur: ["RENAISSANCE ACADEMY",
-    "AATMDEEP VIDYALAYA",
-    "STAR HYBRID SCHOOL",
-    "SPRINGER PUBLIC SCHOOL",
-    "ALMA MATER SCHOOL",
-    "DPS (DELHI PUBLIC SCHOOL)",
-    "LFS (LITTLE FLOWER SCHOOL)",
-    "THE PILLARS PUBLIC SCHOOL",
-    "GPS (GORAKHPUR PUBLIC SCHOOL)",
-    "BLOOMING BUDS SCHOOL",
-    "ST. XAVIER’S PUBLIC SCHOOL",
-    "SURMOUNT INTERNATIONAL SCHOOL",
-    "RPM ACADEMY",
-    "RAMPUS MEMORIAL PUBLIC SCHOOL",
-    "ARMY PUBLIC SCHOOL",
-    "GD GOENKA PUBLIC SCHOOL",
-    "CATALYST HYBRID SCHOOL",
-    "CARMAL SCHOOL",
-    "HP CHILDREN ACADEMY",
-    "CENTERAL ACADEMY",
-    "APEX PUBLIC SCHOOL",
-    "METROPOLITAN SCHOOL",
-    "ST. JOSEPH SCHOOL",
-    "VIDYA PUBLIC SCHOOL",
-    "DIVINE PUBLIC SCHOOL",
-    "NAVALS ACADEMY",
-    "ACADEMY GLOBAL SCHOOL",
-    "SAINIK SCHOOL",
-    "GN NATIONAL PUBLIC SCHOOL"],
+  "AATMDEEP VIDYALAYA",
+  "STAR HYBRID SCHOOL",
+  "SPRINGER PUBLIC SCHOOL",
+  "ALMA MATER SCHOOL",
+  "DPS (DELHI PUBLIC SCHOOL)",
+  "LFS (LITTLE FLOWER SCHOOL)",
+  "THE PILLARS PUBLIC SCHOOL",
+  "GPS (GORAKHPUR PUBLIC SCHOOL)",
+  "BLOOMING BUDS SCHOOL",
+  "ST. XAVIER’S PUBLIC SCHOOL",
+  "SURMOUNT INTERNATIONAL SCHOOL",
+  "RPM ACADEMY",
+  "RAMPUS MEMORIAL PUBLIC SCHOOL",
+  "ARMY PUBLIC SCHOOL",
+  "GD GOENKA PUBLIC SCHOOL",
+  "CATALYST HYBRID SCHOOL",
+  "CARMEL SCHOOL",
+  "HP CHILDREN ACADEMY",
+  "CENTRAL ACADEMY",
+  "APEX PUBLIC SCHOOL",
+  "METROPOLITAN SCHOOL",
+  "ST. JOSEPH SCHOOL",
+  "VIDYA PUBLIC SCHOOL",
+  "DIVINE PUBLIC SCHOOL",
+  "NAVALS ACADEMY",
+  "ACADEMY GLOBAL SCHOOL",
+  "SAINIK SCHOOL",
+  "GN NATIONAL PUBLIC SCHOOL"],
     Lucknow: [
-  "SETH MR. JAIPURIA SCHOOL",
+  "SETH MR.JAIPURIA SCHOOL",
   "VEDAM WORLD SCHOOL",
   "DPS (DELHI PUBLIC SCHOOL)",
   "CMS (CITY MONTESSORI SCHOOL)",
@@ -72,36 +72,37 @@ const RegistrationForm = () => {
   "JAGRAN PUBLIC SCHOOL",
   "ADANI GEMS SCHOOL OF EXCELLENCE",
   "BIRLA OPEN MIND INTERNATIONAL SCHOOL"],
-    Prayagraj: [ "Vidya Vahini school",
-    "Bishop Johnson school katra",
-    "Unity public school kareli/ unity boy's wing bakshi",
-    "Enlighten public school",
-    "Bishop george civil lines",
-    "Jamuna valley kareli",
-    "Bishop johnson civil lines",
-    "Delhi public school",
-    "Gurukulam school phaphamau",
-    "Boys high school",
-    "Sanskar international school subedarganj",
-    "Bal bharti school",
-    "Y.M.C.A centenary school sarojni naidu marg",
-    "Tagore public school",
-    "St. Joseph college CivilLine",
-    "Girls high school civil lines",
-    "The mothers pride school",
-    "Maharshi patanjali school teliyarGanj",
-    "Rani Rewati devi saraswati Vidya Niketan civil lines",
-    "A.M. oxford school kareli",
-    "Hamidia Girls Inter college",
-    "Ramadevi girls inter college",
-    "Gurudwara khalsa",
-    "Ggic",
-    "Vishnu bhagwan",
-    "Benhur",
-    "Bethany",
-    "Saint johns"],
+
+    Prayagraj: ["Vidya Vahini School",
+  "Bishop Johnson's School Katra",
+  "Unity Public School Kareli / Unity Boy's Wing Bakshi",
+  "Enlighten Public School",
+  "Bishop George Civil Lines",
+  "Jamuna Valley Kareli",
+  "Bishop Johnson's Civil Lines",
+  "Delhi Public School",
+  "MPVM Ganga Gurukulam School Phaphamau",
+  "Maharishi Patanjali Vidya Mandir School Teliarganj",
+  "Boys High School Civil Lines",
+  "Sanskar International School Subedar Ganj",
+  "Bal Bharti School Civil Lines",
+  "Y.M.C.A Centenary School Sarojini Naidu Marg",
+  "Tagore Public School Meerapur",
+  "St. Joseph School and College Civil Lines",
+  "Girls High School Civil Lines",
+  "The Mother's Pride School",
+  "Rani Rewati Devi Saraswati Vidya Niketan Civil Lines",
+  "A.M. Oxford School Kareli",
+  "Hamidia Girls Inter College",
+  "Ramadevi Girls Inter College",
+  "Gurudwara Khalsa",
+  "Government Girls Inter College Civil Lines (GGIC)",
+  "Vishnu Bhagwan Public School",
+  "Benhur High School & College Karelabagh",
+  "Bethany Convent School Naini",
+  "Saint John's COED School Naini"],
     Salempur: [ "ST. XAVIER SCHOOL",
-"AATMDEEP VIDYALAYA "
+"AATMDEEP VIDYALAYA"
 ],
   };
 
@@ -345,6 +346,15 @@ const RegistrationForm = () => {
 
         {/* Class & Contact */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input
+            type="text"
+            name="className"
+            required
+            placeholder="Mentor Name "
+            value={formData.className}
+            onChange={handleInputChange}
+            className="border border-gray-300 rounded px-4 py-2"
+          />
           <input
             type="text"
             name="className"
@@ -372,11 +382,30 @@ const RegistrationForm = () => {
             onChange={handleInputChange}
             className="border border-gray-300 rounded px-4 py-2"
           />
+            <input
+            type="tel"
+            name="contact"
+            required
+            placeholder="Student Contact"
+            value={formData.contact}
+            onChange={handleInputChange}
+            className="border border-gray-300 rounded px-4 py-2"
+          />
           <input
             type="email"
             name="email"
             required
             placeholder="Mentor Email"
+            value={formData.email}
+            onChange={handleInputChange}
+            className="border border-gray-300 rounded px-4 py-2"
+          />
+
+             <input
+            type="email"
+            name="email"
+            required
+            placeholder="Student  Email"
             value={formData.email}
             onChange={handleInputChange}
             className="border border-gray-300 rounded px-4 py-2"
