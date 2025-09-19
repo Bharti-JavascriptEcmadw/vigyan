@@ -152,9 +152,16 @@ const RegistrationForm = () => {
     console.log("Form submitted:", data);
     alert("Registration submitted successfully!");
   };
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-10 px-4 flex justify-center items-start">
+    <div className="min-h-screen bg-blue-200 py-10 px-4 flex justify-center items-start">
       <form
         onSubmit={handleSubmit}
         className="bg-white shadow-xl rounded-lg p-8 w-full max-w-4xl space-y-8"
@@ -409,6 +416,20 @@ const RegistrationForm = () => {
             value={formData.email}
             onChange={handleInputChange}
             className="border border-gray-300 rounded px-4 py-2"
+          />
+        </div>
+
+             <div className="mb-4">
+          <label className="block font-semibold mb-1">
+            Do you have robotics, coding, and AI curriculum at your school?
+          </label>
+          <input
+            type="text"
+            name="hasRoboticsAI"
+            placeholder="Yes / No / In Progress"
+            className="w-full border px-3 py-2 rounded"
+            value={formData.hasRoboticsAI}
+            onChange={handleChange}
           />
         </div>
 

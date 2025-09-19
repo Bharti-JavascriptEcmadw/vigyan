@@ -26,6 +26,8 @@ import ShippingPolicy from "./pages/ShippingPolicy";
 import ReturnPolicy from "./pages/ReturnPolicy";
 import RefundPolicy from "./pages/RefundPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import Competition from "./pages/CompetitionCard";
+import Explore from "./pages/Explore";
 const App = () => {
   return (
     <Router>
@@ -61,6 +63,10 @@ const App = () => {
         <Route path="/return_policy" element={<ReturnPolicy />} />
         <Route path="/refund_policy" element={< RefundPolicy/>}/>
         <Route path="/T&C" element={<TermsAndConditions />} />
+        <Route path="/competitions" element={<Competition />} />
+
+        <Route path="/explore" element={<Explore/>}/>
+
 
 
 
