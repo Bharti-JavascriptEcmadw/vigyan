@@ -4,8 +4,7 @@ import { NavLink ,useLocation} from "react-router-dom";
 import { FaChevronDown } from "react-icons/fa";
 import { FaYoutube, FaInstagram, FaFacebookF,FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi";
-// import SubNavbar from "./SubNav";
-// import { Link } from "react-router-dom";
+
 const Navbar = () => {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -547,7 +546,7 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
   </li>
 <li>
   <NavLink 
-    to="/bookdemo" 
+    to="/competitions" 
     onClick={() => handleClick("/competitions")}
   >
     <button className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400 animate-pulse hover:from-yellow-400 hover:to-pink-500 text-white font-extrabold px-10 py-3 rounded-full text-[4.5vw] transition-all duration-700 ease-in-out shadow-lg border border-white">

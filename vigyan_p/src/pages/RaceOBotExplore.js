@@ -45,12 +45,18 @@ const RaceOBotExplore = () => {
           <ul className="list-disc list-inside text-gray-700 space-y-1">           <li>Every team has to register online on the official    <a href="http://www.vigyanpathshala.com" className="text-blue-600 underline">
                 www.vigyanpathshala.com
               </a>{" "} or registration link provided at your school for the competition. 
-A Team ID will be allocated to the team on registration, which shall be used for future references. 
-The decision of the organizers or judges shall be treated as final and binding on all. 
+            </li>
+            <li>
+A Team ID will be allocated to the team on registration, which shall be used for future references.  
 </li>
-<li>No responsibility will be held by NIB, Prayagraj for any late, lost, or misdirected entries. 
-Note that at any point in time the latest information will be that which is on the website; however, registered participants will be informed through mail about any changes.
- All modes of official communication will be through the Nation Innovators Battle’s (NIB) e-mail; participants are advised to keep track of all folders in their e-mail account.
+<li>The decision of the organizers or judges shall be treated as final and binding on all. </li>
+<li>No responsibility will be held by NIB, Prayagraj for any late, lost, or misdirected entries. </li>
+<h2 className="text-2xl font-semibold text-gray-800 mb-2">Note</h2>
+
+<li>Note that at any point in time the latest information will be that which is on the website; however, registered participants will be informed through mail about any changes.
+</li>
+<li>
+    All modes of official communication will be through the Nation Innovators Battle’s (NIB) e-mail; participants are advised to keep track of all folders in their e-mail account.
 </li>
            
           </ul>

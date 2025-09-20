@@ -22,9 +22,18 @@ const RoboRugbyExplore = () => {
             <h2 className="text-xl font-semibold mb-2">Structure</h2>
             <p className="text-gray-700 mb-2">
 The competition will be held in two stages followed by the final presentations at Nation Innovators Battle(NIB), 2025.
- Round 1 – Live Project Presentation by the Teams at their School event. 
-Round 2 –Working Prototype of RoboRugby bot of the Shortlisted teams will proceed to Final, for competition at Nation Innovators Battle before a panel of judges, where the winners will be announced after the competition.
-            </p>
+ 
+           </p>
+
+
+             <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>
+              <b>Round 1:</b>  Live Project Presentation by the Teams at their School event. 
+            </li>
+            <li>
+              <b>Round 2:</b>Working Prototype of RoboRugby bot of the Shortlisted teams will proceed to Final, for competition at Nation Innovators Battle before a panel of judges, where the winners will be announced after the competition.
+            </li>
+          </ul>
           
           </section>
 
@@ -42,15 +51,21 @@ Finale November 19th, 2025 at National Innovators Battle(NIB) Arena Hall.
           <section className="mb-6">
             <h2 className="text-xl font-semibold mb-2">General Rules</h2>
             <ul className="list-disc list-inside text-gray-700 space-y-1">
-              <li>Every team has to register online on the official <strong>www.vigyanpathshala.com 
-                </strong>website or registration link provided at your school for the competition. </li>
+              <li>Every team has to register online on the official  <a href="http://www.vigyanpathshala.com" className="text-blue-600 underline">
+                www.vigyanpathshala.com
+              </a>{" "}website or registration link provided at your school for the competition. </li>
               <li>A Team ID will be allocated to the team on registration, which shall be used for future references. 
 The decision of the organizers or judges shall be treated as final and binding on all. 
 No responsibility will be held by NIB, Prayagraj for any late, lost, or misdirected entries. 
 </li>
+            <h3 className="text-xl font-semibold mb-2">Note</h3>
+
 <li>
     Note that at any point in time the latest information will be that which is on the website; however, registered participants will be informed through mail about any changes.
- All modes of official communication will be through the Nation Innovators Battle’s (NIB) e-mail; participants are advised to keep track of all folders in their e-mail account.
+ 
+</li>
+<li>
+    All modes of official communication will be through the Nation Innovators Battle’s (NIB) e-mail; participants are advised to keep track of all folders in their e-mail account.
 
 </li>
              
@@ -60,9 +75,12 @@ No responsibility will be held by NIB, Prayagraj for any late, lost, or misdirec
           {/* Competition Rules */}
           <section className="mb-6">
             <h2 className="text-xl font-semibold mb-2">Competition Rules</h2>
-            <ul className="list-disc list-inside text-gray-700 space-y-1">
+            <ul className="list-inside text-gray-700 space-y-1">
               <li>•	Team can make Wired and Wireless bot with or without weapon for playing Rugby with their bots</li>
-               <li> <li>•	Team can make Wired and Wireless bot with or without weapon for playing Rugby with their bots</li></li>
+              <li>
+                •	In wireless case-Any team will be disqualified if they are unable to change their wireless module’s frequency ( if asked to do so )..
+              </li>
+            
 
                <li>•	The team which scores maximum points, hits/damage/touch (20 points), toppling out of arena(50 points) and goal(100 points), in the match would be declared as winner of that match.</li>
                <li>•	Robo war is also allowed simultaneously (i.e. any bot can fight with any other using any means).</li>
@@ -73,27 +91,35 @@ No responsibility will be held by NIB, Prayagraj for any late, lost, or misdirec
                <li>•	Dead bots are not allowed, opponents team will be consider as winner.</li>
                <li>•	All bots will be checked at the start of every round that they are moving. In case of any discrepancy, referee will decide that the bot is moving or not.</li>
                <li>•	Claiming is allowed but none should stop his game till referee stops the game.</li>
-               <li><h2>Allowed</h2></li>
-               <li>1.	Hitting OR Kicking OR Thrashing OR Flipping the other bot.</li>
+               
+        <h2 className="text-xl font-semibold mb-2">Allowed</h2>
+
+    <li>1.	Hitting OR Kicking OR Thrashing OR Flipping the other bot.</li>
 <li>2.	Completely demolishing any other bot.</li>
 <li>3.	Anything else that you can imagine!!!
 </li>
 
-<li><h2>Warnings</h2></li>
 
+                <h2 className="text-xl font-semibold mb-2">Warnings</h2>
+
+  
 <li>1.	Bot must not moves before the whistle and after the 3, 2, 1 count begins.</li>
 <li>2.	Touching(any kind of interruption) the bot without asking referee.</li>
 <li>3.	In case of any discrepancy referee’s decisions would be final.</li>
 
 
-<li><h2>Penalty</h2></li>
+
+                    <h2 className="text-xl font-semibold mb-2">Penalty</h2>
+
+   
 
 <li>1.		Second warning is a penalty(20 points).</li>
 <li>2.	Bots (striker+defender both) playing in the penalty should have played in the match.</li>
 <li>3.	Intentionally Arena damaging will lead to disqualification of team.</li>
 <li>4.	Wire cutting of opposite is not allowed. Will lead the team for disqualification.</li>
+                    <h2 className="text-xl font-semibold mb-2">Note</h2>
 
-<li><h2>Note</h2></li>
+
 <li> In case of any disputes, the decision of the organizers would be final and binding to all.</li>
 
 
@@ -104,7 +130,7 @@ No responsibility will be held by NIB, Prayagraj for any late, lost, or misdirec
           {/* Arena & Bot Specification */}
           <section className="mb-6">
             <h2 className="text-xl font-semibold mb-2">Arena</h2>
-            <ul className="list-disc list-inside text-gray-700 space-y-1">
+            <ul className=" list-inside text-gray-700 space-y-1">
               <li>1.	The arena size would be 8ft x 8ft approx.</li>
               <li>2.	Arena may have some hurdle.</li>
              </ul>
@@ -129,7 +155,7 @@ No responsibility will be held by NIB, Prayagraj for any late, lost, or misdirec
     <p className="text-gray-700 mb-2">
 Robots can have any kind of magnetic weapons, cutters, flippers, saws, lifting devices, spinning hammers etc. as weapons along with
     </p>
-    <ul className="list-disc list-inside text-gray-700 space-y-1 mb-2">
+    <ul className=" list-inside text-gray-700 space-y-1 mb-2">
       <li>Use of pneumatics and hydraulics are allowed.</li>
       <li>
        Pneumatics Robot can use pressurized non-inflammable gases to actuate pneumatic devices. Maximum allowed outlet nozzle pressure is 8 bar.

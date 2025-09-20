@@ -49,13 +49,15 @@ const LineFollowerExplore = () => {
           </h2>
           <ul className="list-disc list-inside space-y-1">
             
-            <li>Every team has to register online on the official <strong>vigyanpathshala.com </strong>website or registration link provided at your school for the competition</li>
+            <li>Every team has to register online on the official <strong> <a href="/">www.vigyanpathshala.com </a></strong>website or registration link provided at your school for the competition</li>
             <li>A Team ID will be allocated to the team on registration, which shall be used for future references. </li>
             <li>The decision of the organizers or judges shall be treated as final and binding on all. </li>
             <li>
               No responsibility will be held by NIB, Prayagraj for any late, lost, or misdirected entries. 
             </li>
-            <li>Note that at any point in time the latest information will be that which is on the website; however, registered participants will be informed through mail about any changes.</li>
+            <h3 className="text-2xl font-bold text-indigo-600 border-b-2 border-indigo-300 pb-2 mb-3">
+            Note          </h3>
+            <li> Note that at any point in time the latest information will be that which is on the website; however, registered participants will be informed through mail about any changes.</li>
             <li> All modes of official communication will be through the Nation Innovators Battle’s (NIB) e-mail; participants are advised to keep track of all folders in their e-mail account.</li>
           </ul>
         </section>
@@ -133,7 +135,7 @@ const LineFollowerExplore = () => {
 Bot Specification           </h2>
 
           <h3 className="text-lg font-semibold mt-2">Dimensions and Weight</h3>
-          <ul className="list-disc list-inside space-y-1">
+          <ul className=" list-inside space-y-1">
             <li>
             1.	The robot should not be more than 250mm*250mm*300mm (length*breadth*height) in size at any time during game play.
             </li>
@@ -142,13 +144,13 @@ Bot Specification           </h2>
           </ul>
 
           <h3 className="text-lg font-semibold mt-3"> Mobility</h3>
-          <ul className="list-disc list-inside space-y-1">
+          <ul className="list-inside space-y-1">
             <li>1.	All robots must have easily visible and controlled mobility in order to compete.</li>
             <li>2.	Flying is not allowed. </li>
           </ul>
 
           <h3 className="text-lg font-semibold mt-3">Batteries and Power</h3>
-          <ul className="list-disc list-inside space-y-1">
+          <ul className="list-inside space-y-1">
             <li>1.	Each team must have batteries to power their bots (Note- backup battery will be provided by NIB at arena to the teams in case of emergency).</li>
             <li>2.	The battery will be taken into consideration for the measurement to be made for the machine dimension and the weight.</li>
             <li>3.	The only permitted batteries are ones that cannot spill or spray any of their contents when damaged or inverted.</li>

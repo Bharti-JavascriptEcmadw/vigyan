@@ -54,12 +54,17 @@ Registration Closes on November 13th, 2025             </li>
           </h2>
           <ul className="list-disc list-inside text-gray-700 space-y-2">
             <li>
-            Every team has to register online on the official <strong>www.vigyanpathshala.com</strong>  website or registration link provided at your school for the competition. 
+            Every team has to register online on the official <a href="http://www.vigyanpathshala.com" className="text-blue-600 underline">
+                www.vigyanpathshala.com
+              </a>{" "}  website or registration link provided at your school for the competition. 
 A Team ID will be allocated to the team on registration, which shall be used for future references. 
 The decision of the organizers or judges shall be treated as final and binding on all. 
 
           </li>
             <li>No responsibility will be held by NIB, Prayagraj for any late, lost, or misdirected entries. </li>
+            <h3 className="text-2xl font-semibold text-blue-700 mb-3 border-b-2 border-blue-400 inline-block pb-1">
+          Note
+          </h3>
             <li>Note that at any point in time the latest information will be that which is on the website; however, registered participants will be informed through mail about any changes.</li>
             <li>
                  All modes of official communication will be through the Nation Innovators Battle’s (NIB) e-mail; participants are advised to keep track of all folders in their e-mail account.
@@ -193,5 +198,13 @@ The decision of the organizers or judges shall be treated as final and binding o
     </div>
   );
 };
+
+
+
+
+
+
+
+
 
 export default JuniorFutureExplore;
