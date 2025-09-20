@@ -3,40 +3,40 @@ import React from "react";
 
 const testimonials = [
   {
-    name: "Shialika Sharma",
+    name: "Piyush Sharma",
     message:
       "Working in the lab was a transformative experience. It gave me the confidence and technical knowledge to build my very first robot from scratch, and it sparked a deep passion for engineering.",
     photo: "/assets/test/1.jpg",
   },
   {
-    name: "Shubhanshi Verma",
+    name: "Fatima Zahera",
     message:
       "The mentorship I received was truly invaluable. The instructors were not only supportive but also provided access to world-class tools and resources that made learning robotics both fun and effective.",
     photo: "/assets/test/2.jpg",
   },
   {
-    name: "Aryan Mishra",
+    name: "Raj kumar",
     message:
       "Through hands-on robotics classes, I learned how to apply theoretical concepts. It sharpened my critical thinking and gave me a new perspective on how technology can be used to create solutions.",
-    photo: "/assets/test/3.jpg",
+    photo: "/assets/Rajkumar.jpeg",
   },
   {
-    name: "Bhavya Singh",
+    name: "Aradhya Rastogi",
     message:
       "The hands-on robot building sessions helped me overcome my fear of failure. I learned to test, iterate, and ultimately gained the confidence to present my own projects proudly.",
-    photo: "/assets/test/4.jpg",
+    photo: "/assets/Aradhya Rastogi.jpeg",
   },
   {
-    name: "Ishaan Tripathi",
+    name: "Ayushi singh",
     message:
       "Understanding how sensors and programming work together. It completely changed how I see devices and inspired me to pursue deeper knowledge in automation.",
-    photo: "/assets/test/5.jpg",
+    photo: "/assets/Ayushi singh.jpeg",
   },
   {
-    name: "Kavya Patel",
+    name: "Vaishnavi Pandey",
     message:
       "Taking part in national robotics competitions pushed my creativity to new levels. Collaborating with peers and solving challenges under pressure was both exciting and incredibly rewarding.",
-    photo: "/assets/test/3.jpg",
+    photo: "/assets/Vaishnavi Pandey.jpeg",
   },
 ];
 

@@ -45,7 +45,7 @@ const courses = [
     title: 'Coding & Logic Building',
     subtitle: 'Build strong programming logic and problem-solving skills',
     imageText: 'Coding & Logic\nBASIC TO ADVANCE',
-    price: '₹600/',
+  price: '₹2,500.00',
   },
   {
     title: 'App Inventor',

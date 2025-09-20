@@ -16,9 +16,9 @@ import {
 const Footer = () => {
   // Explicit label/path pairs for Useful Links
   const Links = [
-    { label: 'Home', path: '/home' },
+    { label: 'Home', path:'/' },
     { label: 'About Us', path: '/about' },
-    { label: 'Testimonials', path: '/testimonials' },
+    { label: 'Success Stories', path: '/success-story' },
     { label: 'Event', path: '/event' },
     { label: 'Courses', path: '/courses' },
     { label: 'Test Series', path: '/test-series' },
