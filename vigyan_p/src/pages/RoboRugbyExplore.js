@@ -178,6 +178,33 @@ Robots can have any kind of magnetic weapons, cutters, flippers, saws, lifting d
   </ul>
 </section>
 
+<section className="mb-6">
+  <h2 className="text-xl font-semibold mb-2">Spring, Pinning and Lifting</h2>
+  <ul className="list-decimal list-inside text-gray-700 space-y-1">
+    <li>Any large springs used for drive or weapon power must have a way of loading and actuating the spring remotely under the robots power.</li>
+    <li>
+
+	Any flywheel or similar kinetic energy storing device must not be spinning or storing energy in anyway unless inside the arena or testing area.</li>
+  </ul>
+</section>
+
+<section className="mb-6">
+  <h2 className="text-xl font-semibold mb-2">SUGGESTED WIRELESS MODULES
+</h2>
+  <p className="text-gray-700 mb-2">
+  2.4GHz WIRELESS MODULE	
+  </p>
+  <p className="text-gray-700 mb-2">
+   
+With a RANGE OF OVER 200M and NO FREQUENCY CLASH, this wireless module can be interfaced to your robot using the below motor driver
+  </p>
+</section>
+
+ 
+
+
+
+
 
 
         </div>
