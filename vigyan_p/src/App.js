@@ -28,6 +28,11 @@ import RefundPolicy from "./pages/RefundPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import Competition from "./pages/CompetitionCard";
 import Explore from "./pages/Explore";
+import RaceOBotExplore from "./pages/RaceOBotExplore";
+import JuniorFutureExplore from "./pages/JuniorFutureExplore";
+import RoboRugbyExplore from "./pages/RoboRugbyExplore";
+import SeniorFutureExplore from "./pages/SeniorFutureExplore";
+import LineFollowerExplore from "./pages/LineFollowerExplore";
 const App = () => {
   return (
     <Router>
@@ -66,6 +71,13 @@ const App = () => {
         <Route path="/competitions" element={<Competition />} />
 
         <Route path="/explore" element={<Explore/>}/>
+
+
+        <Route path="/explore/race-o-bot" element={<RaceOBotExplore />} />
+        <Route path="/explore/junior-future" element={<JuniorFutureExplore />} />
+        <Route path="/explore/robo-rugby" element={<RoboRugbyExplore />} />
+        <Route path="/explore/senior-future" element={<SeniorFutureExplore />} />
+        <Route path="/explore/line-follower" element={<LineFollowerExplore/>} />
 
 
 

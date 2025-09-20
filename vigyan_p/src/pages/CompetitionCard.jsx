@@ -4,23 +4,23 @@ import { useNavigate } from 'react-router-dom';
 const Competition = () => {
   const navigate = useNavigate();
 
-  // Junior Competitions with public folder images
+  // Junior Competitions
   const juniorCompetitions = [
-    { title: "Race-O-Bot", image: "/assets/robo.jpeg" },
-    { title: "Junior Future Innovators", image: "/assets/jfuture.jpeg" }
+    { title: "Race-O-Bot", image: "/assets/robo.jpeg", path: "/explore/race-o-bot" },
+    { title: "Junior Future Innovators", image: "/assets/jfuture.jpeg", path: "/explore/junior-future" }
   ];
 
-  // Senior Competitions with public folder images
+  // Senior Competitions
   const seniorCompetitions = [
-    { title: "Robo Rugby Championship", image: "/assets/robo.jpeg" },
-    { title: "Senior Future Innovators", image: "/assets/s-futu.jpeg" },
-    { title: "Line Follower Robot", image: "/assets/linefoll.jpeg" }
+    { title: "Robo Rugby Championship", image: "/assets/robo.jpeg", path: "/explore/robo-rugby" },
+    { title: "Senior Future Innovators", image: "/assets/s-futu.jpeg", path: "/explore/senior-future" },
+    { title: "Line Follower Robot", image: "/assets/linefoll.jpeg", path: "/explore/line-follower" }
   ];
 
   // Render individual competition card
-  const renderCard = ({ title, image }) => (
+  const renderCard = ({ title, image, path }) => (
     <div key={title} className="bg-gray-800 p-4 rounded-lg shadow-md w-full sm:w-72">
-      <h3 className="text-lg font-semibold mb-3 text-center  text-white">{title}</h3>
+      <h3 className="text-lg font-semibold mb-3 text-center text-white">{title}</h3>
       <img
         src={image}
         alt={title}
@@ -33,8 +33,8 @@ const Competition = () => {
         >
           Register
         </button>
-         <button
-          onClick={() => navigate('/explore', { state: { title } })}
+        <button
+          onClick={() => navigate(path)}
           className="bg-green-500 text-white px-4 py-1 rounded hover:bg-green-600"
         >
           Explore
