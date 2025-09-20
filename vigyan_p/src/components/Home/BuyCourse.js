@@ -4,11 +4,18 @@ import React, { useState } from 'react';
 import InquiryForm from './InquiryForm'; // adjust path if needed
 
 const courses = [
-  {
-    title: 'Python and AI',
-    subtitle: 'Master AI implementation in Python',
-    imageText: 'Python and AI\nBASIC TO ADVANCE',
-    price: '₹2,999.92',
+
+{
+        "title": "Python",
+        "subtitle": "Learn Python programming from basics to advanced",
+        "imageText": "Python\nBASIC TO ADVANCE",
+        "price": "1200/-"
+    },
+ {
+    title: 'Robotics Advance',
+    subtitle: 'Learn the Advance of Robotics and automation',
+    imageText: 'Robotics\nBASIC TO ADVANCE',
+    price: '1500/-',
   },
   {
     title: 'AI',
@@ -17,16 +24,16 @@ const courses = [
     price: '₹3,499.00',
   },
   {
-    title: 'Robotics',
+    title: 'Robotics Basic',
     subtitle: 'Learn the basics of Robotics and automation',
     imageText: 'Robotics\nBASIC TO ADVANCE',
-    price: '₹2,299.00',
+    price: '1500/-',
   },
   {
     title: 'Drone Technology',
     subtitle: 'Explore drone design, control, and applications',
     imageText: 'Drone Technology\nBASIC TO ADVANCE',
-    price: '₹3,199.00',
+    price: '10500',
   },
 
   {
@@ -39,7 +46,7 @@ const courses = [
     title: 'Coding & Logic Building',
     subtitle: 'Build strong programming logic and problem-solving skills',
     imageText: 'Coding & Logic\nBASIC TO ADVANCE',
-    price: '₹1,799.00',
+    price: '₹600/',
   },
   {
     title: 'App Inventor',
@@ -57,7 +64,7 @@ const courses = [
     title: 'Digital Marketing',
     subtitle: 'Master SEO, social media, and digital campaigns',
     imageText: 'Digital Marketing\nBASIC TO ADVANCE',
-    price: '₹8,699.00',
+    price: '8500/',
   },
 ];
 
