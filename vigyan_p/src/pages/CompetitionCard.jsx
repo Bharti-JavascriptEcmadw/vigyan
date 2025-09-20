@@ -14,7 +14,7 @@ const Competition = () => {
   const seniorCompetitions = [
     { title: "Robo Rugby Championship", image: "/assets/robo.jpeg", path: "/explore/robo-rugby" },
     { title: "Senior Future Innovators", image: "/assets/s-futu.jpeg", path: "/explore/senior-future" },
-    { title: "Line Follower Robot", image: "/assets/linefoll.jpeg", path: "/explore/line-follower" }
+    { title: "Line Follower Robot/Path finder ", image: "/assets/linefoll.jpeg", path: "/explore/line-follower" }
   ];
 
   // Render individual competition card
