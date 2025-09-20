@@ -6,7 +6,7 @@ const Competition = () => {
 
   // Junior Competitions
   const juniorCompetitions = [
-    { title: "Race-O-Bot", image: "/assets/robo.jpeg", path: "/explore/race-o-bot" },
+    { title: "Race-O-Bot", image: "/assets/race-o-bot.jpeg", path: "/explore/race-o-bot" },
     { title: "Junior Future Innovators", image: "/assets/jfuture.jpeg", path: "/explore/junior-future" }
   ];
 
