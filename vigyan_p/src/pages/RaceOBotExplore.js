@@ -11,6 +11,8 @@ const RaceOBotExplore = () => {
           Race-O-Bot
         </h1>
 
+      
+
         {/* Structure */}
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-800 mb-2">Structure</h2>
@@ -123,6 +125,31 @@ const RaceOBotExplore = () => {
             <li>No external power supply.</li>
           </ul>
         </section>
+
+        {/* Code of Conduct and Consent Form Links */}
+<div className="text-center mt-8 text-gray-700">
+  <p className="mb-2">
+    <a
+      href="/documents/code-of-conduct.pdf"
+      className="text-blue-600 underline mr-4"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Code of Conduct
+    </a>
+    <a
+      href="/documents/consent-form.pdf"
+      className="text-blue-600 underline"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Consent Form
+    </a>
+  </p>
+  <p className="text-sm text-red-600 font-medium mt-1">
+* Both forms must be filled and brought on the day of the competition, i.e., 19th November.  </p>
+</div>
+
 
         {/* Back Button */}
         <div className="flex justify-center mt-8">

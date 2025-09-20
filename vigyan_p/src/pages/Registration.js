@@ -161,10 +161,11 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-blue-200 py-10 px-4 flex justify-center items-start">
+    <div className="min-h-screen bg-blue-200 py-10 px-4 flex justify-center mx-auto flex-col">
+      
       <form
         onSubmit={handleSubmit}
-        className="bg-white shadow-xl rounded-lg p-8 w-full max-w-4xl space-y-8"
+        className=" mx-auto bg-white shadow-xl rounded-lg p-8 w-full max-w-4xl space-y-8"
       >
         <h1 className="text-3xl font-semibold text-blue-700 text-center mb-6">
           Student Registration Form
@@ -489,6 +490,31 @@ const RegistrationForm = () => {
           </button>
         </div>
       </form>
+
+
+{/* Code of Conduct and Consent Form Links */}
+<div className="text-center mt-8 text-gray-700">
+  <p className="mb-2">
+    <a
+      href="/assets/codeofconduct.pdf"
+      className="text-blue-600 underline mr-4"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Code of Conduct
+    </a>
+    <a
+      href="/assets/consent.pdf"
+      className="text-blue-600 underline"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Consent Form
+    </a>
+  </p>
+  <p className="text-sm text-red-600 font-medium mt-1">
+* Both forms must be filled and brought on the day of the competition, i.e., 19th November.  </p>
+</div>
     </div>
   );
 };
