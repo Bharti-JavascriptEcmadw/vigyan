@@ -6,34 +6,33 @@ import InquiryForm from './InquiryForm'; // adjust path if needed
 const courses = [
 
 {
-        "title": "Python",
-        "subtitle": "Learn Python programming from basics to advanced",
-        "imageText": "Python\nBASIC TO ADVANCE",
-        "price": "1200/-"
+        "title": "Python Basics",
+        "subtitle": "Learn Python programming from basics",
+        "imageText": "Python\nBASIC",
+         price: '₹1,200.00',
     },
  {
     title: 'Robotics Advance',
     subtitle: 'Learn the Advance of Robotics and automation',
     imageText: 'Robotics\nBASIC TO ADVANCE',
-    price: '1500/-',
-  },
+ price: '₹3,500.00',  },
   {
-    title: 'AI',
+    title: 'AI using Python',
     subtitle: 'Dive deep into Artificial Intelligence fundamentals and applications',
-    imageText: 'Artificial Intelligence\nBASIC TO ADVANCE',
-    price: '₹3,499.00',
+    imageText: 'Artificial Intelligence\n Using Python',
+    price: '₹5,500.00',
   },
   {
     title: 'Robotics Basic',
     subtitle: 'Learn the basics of Robotics and automation',
-    imageText: 'Robotics\nBASIC TO ADVANCE',
-    price: '1500/-',
+    imageText: 'Robotics\n BASIC',
+     price: '₹1,500.00',
   },
   {
     title: 'Drone Technology',
     subtitle: 'Explore drone design, control, and applications',
     imageText: 'Drone Technology\nBASIC TO ADVANCE',
-    price: '10500',
+     price: '₹10,500.00',
   },
 
   {
@@ -64,7 +63,7 @@ const courses = [
     title: 'Digital Marketing',
     subtitle: 'Master SEO, social media, and digital campaigns',
     imageText: 'Digital Marketing\nBASIC TO ADVANCE',
-    price: '8500/',
+    price: '₹7,500.00',
   },
 ];
 
