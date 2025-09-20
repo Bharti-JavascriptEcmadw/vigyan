@@ -61,7 +61,7 @@ const TestimonialsCarousel = () => {
     container.innerHTML += container.innerHTML;
 
     let animationFrameId;
-    const scrollSpeed = 0.3; // smaller = slower and smoother
+    const scrollSpeed = 0.5; // smaller = slower and smoother
 
     const step = () => {
       if (container.scrollLeft >= container.scrollWidth / 2) {
