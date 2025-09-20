@@ -2,53 +2,53 @@ import React, { useEffect, useRef, } from "react";
 import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const testimonials = [
-  {
-    description: `It's a matter of pride that the junior computer lab of Bal Bharti Public School has been selected by Intel and STEMROBO for setting up the Intel learning center. I think we all agree that the coming era is the era of Artificial intelligence and Machine learning. It's going to be all about the Internet of Things and the future world will comprise of drones and robots.`,
-    name: "Geeta Gangwani",
-    school: "Bal Bharti Public School, Rohini",
-    image: "/assets/st/8.jpg",
-    rating: 5,
-    score: 99,
-  },
-  {
-    description: `A very exciting moment for us as we introduced Intel Learning Centre powered by STEMROBO. As we all know in today’s time, Artificial Intelligence, Coding, and experiential learning are the need of the hour, in today’s time as we are looking at New Education Policy that is working towards introducing 21st-century skills among students like creative thinking.`,
-    name: "Pallavi Sharma",
-    school: "Mamta Modern School",
-    image: "/assets/st/9.jpg",
-    rating: 5,
-    score: 99,
-  },
-  {
-    description: `We are so delighted and grateful to Intel and STEMROBO Technologies for giving us this opportunity to be a part of this revolution. The resources that have been brought for our children through this AI lab will provide our children an opportunity to be a part of this revolution. Our Children will be going to be benefited from this Intel learning center.`,
+
+     {
+    description: `We are so delighted and grateful to vigyanpathshala.com  for giving us this opportunity to be a part of this revolution. The resources that have been brought for our children through this AI lab will provide our children an opportunity to be a part of this revolution. Our Children will be going to be benefited from this Intel learning center.`,
     name: "Bhawana Kulshrestra",
-    school: "Amity International School",
+    school: "M.M. Public School",
     image: "/assets/st/10.jpg",
     rating: 5,
     score: 99,
   },
   {
-    description: `Another testimonial repeated for scroll test. Bal Bharti Public School has been selected by Intel and STEMROBO. The future world will comprise of drones and robots.`,
+    description: `It's a matter of pride that the junior computer lab of Bal Bharti Public School has been selected by vigyanpathshala.com for setting up the Intel learning center. I think we all agree that the coming era is the era of Artificial intelligence and Machine learning. It's going to be all about the Internet of Things and the future world will comprise of drones and robots.`,
     name: "Geeta Gangwani",
-    school: "Bal Bharti Public School, Rohini",
-    image: "/assets/st/11.jpg",
+    school: "VEDAM World School",
+    image: "/assets/st/8.jpg",
+    rating: 5,
+    score: 99,
+  },
+
+    {
+    description: `We are so delighted and grateful to vigyanpathshala.com  for giving us this opportunity to be a part of this revolution. The resources that have been brought for our children through this AI lab will provide our children an opportunity to be a part of this revolution. Our Children will be going to be benefited from this Intel learning center.`,
+    name: "Bhawana Kulshrestra",
+    school: "Indra Heritage School",
+    image: "/assets/st/10.jpg",
+    rating: 5,
+    score: 99,
+  },
+
+  {
+    description: `A very exciting moment for us as we introduced Intel Learning Centre powered by vigyanpathshala.com . As we all know in today’s time, Artificial Intelligence, Coding, and experiential learning are the need of the hour, in today’s time as we are looking at New Education Policy that is working towards introducing 21st-century skills among students like creative thinking.`,
+    name: "Pallavi Sharma",
+    school: "Jamuna Valley Public School",
+    image: "/assets/st/9.jpg",
     rating: 5,
     score: 99,
   },
   {
-    description: `A very exciting moment for us as we introduced Intel Learning Centre powered by STEMROBO. As we all know in today’s time, Artificial Intelligence, Coding, and experiential learning are the need of the hour, in today’s time as we are looking at New Education Policy that is working towards introducing 21st-century skills among students like creative thinking.`,
-    name: "Pallavi Sharma",
-    school: "Mamta Modern School",
-    image: "/assets/st/12.jpg",
+    description: `We are so delighted and grateful to vigyanpathshala.com  for giving us this opportunity to be a part of this revolution. The resources that have been brought for our children through this AI lab will provide our children an opportunity to be a part of this revolution. Our Children will be going to be benefited from this Intel learning center.`,
+    name: "Bhawana Kulshrestra",
+    school: "Aatmdeep Vidyalaya",
+    image: "/assets/st/10.jpg",
     rating: 5,
     score: 99,
   },
-];
-// import React, { useEffect, useRef } from "react";
-// import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-// const testimonials = [
-  // ... your testimonials data as before ...
-// ];
+ 
+];
+
 
 const TestimonialsCarousel = () => {
   const scrollRef = useRef(null);
@@ -61,7 +61,7 @@ const TestimonialsCarousel = () => {
     container.innerHTML += container.innerHTML;
 
     let animationFrameId;
-    const scrollSpeed = 0.5; // smaller = slower and smoother
+    const scrollSpeed = 0.3; // smaller = slower and smoother
 
     const step = () => {
       if (container.scrollLeft >= container.scrollWidth / 2) {
