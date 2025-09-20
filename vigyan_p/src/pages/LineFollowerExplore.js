@@ -10,10 +10,7 @@ const LineFollowerExplore = () => {
         <h1 className="text-4xl font-extrabold mb-6 text-center text-indigo-700">
           Line Follower Robot/Path finder 
         </h1>
-        <p className="text-lg text-gray-700 mb-8 text-center">
-          The Line Follower Robot competition tests precision and accuracy.
-          Program your bot to detect and follow a path as quickly as possible. 🛤️
-        </p>
+      
 
         {/* Structure */}
         <section className="mb-8">
@@ -21,18 +18,14 @@ const LineFollowerExplore = () => {
             Structure
           </h2>
           <p>
-            The competition will be held in two stages followed by the final
-            presentations at Nation Innovators Battle (NIB), 2025.
+       The competition will be held in two stages followed by the final presentations at Nation Innovators Battle(NIB), 2025.
           </p>
           <ul className="list-disc list-inside mt-2 space-y-1">
             <li>
-              <strong>Round 1:</strong> Live Project Presentation by the Teams at
-              their School event.
+              <strong>Round 1:</strong> Live Project Presentation by the Teams at their School event. 
             </li>
             <li>
-              <strong>Round 2:</strong> Working Prototype of Line Follower Robot
-              of the Shortlisted teams will proceed to Final, for competition at
-              NIB before a panel of judges, where the winners will be announced.
+              <strong>Round 2:</strong> Working Prototype of Line Follower Robot of the Shortlisted teams will proceed to Final, for competition at Nation Innovators Battle before a panel of judges, where the winners will be announced after the competition.
             </li>
           </ul>
         </section>
@@ -43,8 +36,9 @@ const LineFollowerExplore = () => {
             Timeline
           </h2>
           <ul className="list-disc list-inside space-y-1">
-            <li>📌 Registration Closes: <strong>November 13th, 2025</strong></li>
-            <li>🏆 Finale: <strong>November 19th, 2025</strong> at NIB Arena Hall</li>
+            <li>Registration Closes on November 13th, 2025 </li>
+            <li>Finale:<strong>November 19th, 2025 </strong>   at National Innovators Battle(NIB) Arena Hall</li>
+          
           </ul>
         </section>
 
@@ -54,65 +48,69 @@ const LineFollowerExplore = () => {
             General Rules
           </h2>
           <ul className="list-disc list-inside space-y-1">
+            
+            <li>Every team has to register online on the official <strong>vigyanpathshala.com </strong>website or registration link provided at your school for the competition</li>
+            <li>A Team ID will be allocated to the team on registration, which shall be used for future references. </li>
+            <li>The decision of the organizers or judges shall be treated as final and binding on all. </li>
             <li>
-              Teams must register online on{" "}
-              <a
-                href="https://www.vigyanpathshala.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 underline"
-              >
-                www.vigyanpathshala.com
-              </a>{" "}
-              or via the school registration link.
+              No responsibility will be held by NIB, Prayagraj for any late, lost, or misdirected entries. 
             </li>
-            <li>A Team ID will be allocated on registration for all references.</li>
-            <li>Judges’ decision shall be final and binding on all teams.</li>
-            <li>No responsibility for late or lost entries by NIB, Prayagraj.</li>
-            <li>
-              Official updates will be on the website & via registered email.
-            </li>
+            <li>Note that at any point in time the latest information will be that which is on the website; however, registered participants will be informed through mail about any changes.</li>
+            <li> All modes of official communication will be through the Nation Innovators Battle’s (NIB) e-mail; participants are advised to keep track of all folders in their e-mail account.</li>
           </ul>
         </section>
 
         {/* Competition Rules */}
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-indigo-600 border-b-2 border-indigo-300 pb-2 mb-3">
-            Competition Rules
+           Competition Rules
           </h2>
           <ul className="list-disc list-inside space-y-1">
-            <li>Teams must use fully wireless and autonomous bots.</li>
+            <li>Team  has to use Wireless completely an Autonomous bots</li>
             <li>
-              Winner = Minimum time (out of 2 runs) + penalty (5 sec per touch).
+             The team with minimum time taken out of 2 runs after adding penalty time(On Every touch 5 sec will be added to their final timing for ex. If a team has taken 2min in completing the entire race with 3 touches therefore team total timing will be 135seconds or 2min. 15 sec) in the match would be declared as winner of that match.
             </li>
             <li>
-              Example: 2 mins + 3 touches → 135 seconds (2 min 15 sec).
+             Compensation time will be given on the discretion of referee.
             </li>
-            <li>Compensation time and timeouts at referee’s discretion.</li>
-            <li>Break time: 1–2 minutes between matches.</li>
+            <li>The break time would be 1-2 minutes.</li>
+            <li>Timeouts will be on the discretion of the referee.</li>
             <li>Dead bots are not allowed.</li>
-            <li>All bots checked before each round.</li>
+            <li>All bots will be checked at the start of every round that they are moving. In case of any discrepancy, referee will decide that the bot is moving or not.</li>
+
+            <li>Claiming is allowed but none should stop his game till referee stops the game.</li>
           </ul>
         </section>
+
+
+
 
         {/* Warnings */}
         <section className="mb-8">
-          <h3 className="text-xl font-semibold text-red-600 mb-2">⚠ Warnings</h3>
+          <h3 className="text-xl font-semibold text-red-600 mb-2">Warnings</h3>
           <ul className="list-disc list-inside space-y-1">
-            <li>Bots must not move before the whistle & countdown.</li>
-            <li>Touching bot without referee’s permission is forbidden.</li>
-            <li>Referee’s decision is final in disputes.</li>
+            <li>Bot must not moves before the whistle and after the 3, 2, 1 count begins.</li>
+            <li>Touching (any kind of interruption) the bot without asking referee.</li>
+            <li>In case of any discrepancy referee’s decisions would be final.</li>
           </ul>
         </section>
 
+
+
+
         {/* Penalties */}
         <section className="mb-8">
-          <h3 className="text-xl font-semibold text-red-600 mb-2">🚨 Penalties</h3>
+          <h3 className="text-xl font-semibold text-red-600 mb-2">Penalty</h3>
           <ul className="list-disc list-inside space-y-1">
-            <li>Second warning = +10 seconds penalty.</li>
-            <li>Damaging the arena = Disqualification.</li>
+            <li>Second warning is a penalty(+10 sec).</li>
+            <li>Intentionally Arena damaging will lead to disqualification of team.</li>
+            <li>Note: In case of any disputes, the decision of the organizers would be final and binding to all.
+</li>
           </ul>
         </section>
+
+
+
 
         {/* Arena */}
         <section className="mb-8">
@@ -120,39 +118,41 @@ const LineFollowerExplore = () => {
             Arena
           </h2>
           <ul className="list-disc list-inside space-y-1">
-            <li>Approximate size: 6ft × 4ft.</li>
-            <li>Contains hurdles like sharp turns.</li>
+            <li>The arena with would be 6ft to 4ft approx.</li>
+            <li>Arena will have some hurdle(like sharp turns etc).</li>
           </ul>
         </section>
+
+
+
+        
 
         {/* Bot Specification */}
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-indigo-600 border-b-2 border-indigo-300 pb-2 mb-3">
-            Bot Specification
-          </h2>
+Bot Specification           </h2>
 
-          <h3 className="text-lg font-semibold mt-2">Dimensions & Weight</h3>
+          <h3 className="text-lg font-semibold mt-2">Dimensions and Weight</h3>
           <ul className="list-disc list-inside space-y-1">
             <li>
-              Max size: 250mm × 250mm × 300mm (L × B × H) at all times.
+            1.	The robot should not be more than 250mm*250mm*300mm (length*breadth*height) in size at any time during game play.
             </li>
-            <li>Max weight: 3.5kg.</li>
-            <li>All bots must be declared before their first match.</li>
+            <li>2.	Bot can be of at-most 3.5 Kg’s</li>
+            <li>3.	Teams have to show and declare ALL of their bots before their first match itself. </li>
           </ul>
 
-          <h3 className="text-lg font-semibold mt-3">Mobility</h3>
+          <h3 className="text-lg font-semibold mt-3"> Mobility</h3>
           <ul className="list-disc list-inside space-y-1">
-            <li>Bots must have visible & controlled mobility.</li>
-            <li>No flying bots allowed.</li>
+            <li>1.	All robots must have easily visible and controlled mobility in order to compete.</li>
+            <li>2.	Flying is not allowed. </li>
           </ul>
 
-          <h3 className="text-lg font-semibold mt-3">Batteries & Power</h3>
+          <h3 className="text-lg font-semibold mt-3">Batteries and Power</h3>
           <ul className="list-disc list-inside space-y-1">
-            <li>Teams must carry their own batteries.</li>
-            <li>Backup may be provided by NIB in emergencies.</li>
-            <li>Batteries included in weight & size checks.</li>
-            <li>Only spill-proof batteries allowed.</li>
-            <li>Max voltage = 12V. No external supply provided.</li>
+            <li>1.	Each team must have batteries to power their bots (Note- backup battery will be provided by NIB at arena to the teams in case of emergency).</li>
+            <li>2.	The battery will be taken into consideration for the measurement to be made for the machine dimension and the weight.</li>
+            <li>3.	The only permitted batteries are ones that cannot spill or spray any of their contents when damaged or inverted.</li>
+            <li>4.	The maximum allowed battery voltage is 12 volts. No external power supply will be provided</li>
           </ul>
         </section>
 
